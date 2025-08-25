@@ -45,7 +45,7 @@ public class BatchConfig {
                 .processor(processor)
                 .writer(writer)
                 .faultTolerant()
-                .skipPolicy(new DuplicateEmailSkipPolicy()) // ⚠️ Skip si email dupliqué
+                .skipPolicy(new DuplicateEmailSkipPolicy()) //Skip si email dupliqué
                 .build();
     }
 
