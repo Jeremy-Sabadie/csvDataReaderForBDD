@@ -18,8 +18,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 @EnableBatchProcessing
 public class CompteBatchConfig {
 
-    private final JobRepository jobRepository;
-    private final PlatformTransactionManager tx;
+    private final JobRepository jobRepository; //Le repository sers en quelque sorte de répertoire pour enregistrer les logs du job construit par le jobuilder.
+    private final PlatformTransactionManager tx;//Sert pour gérer les transactions de la persistance des données ici spring data JPA.
 
     public CompteBatchConfig(JobRepository jobRepository, PlatformTransactionManager tx) {
         this.jobRepository = jobRepository;
